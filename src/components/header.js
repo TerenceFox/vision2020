@@ -1,42 +1,24 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import Jumbotron from "react-bootstrap/Jumbotron"
+import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+const Header = () => {
+  return (
+    <Jumbotron fluid>
+      <Container>
+        <Row>
+          <Col sm={6} md={4}>
+            <img src="http://www.fillmurray.com/200/200" />
+          </Col>
+          <Col sm={6} md={8}>
+            <h1>Kennedy Children’s Center Vision 2020 Virtual Benefit</h1>
+          </Col>
+        </Row>
+      </Container>
+    </Jumbotron>
+  )
 }
 
 export default Header
