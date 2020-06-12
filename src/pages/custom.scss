@@ -4,5 +4,22 @@ img {
   max-width: 100%;
 }
 
+.carousel-item {
+  background: purple;
+  height: 500px;
+}
+
+h3 {
+  text-align: center;
+  margin: auto;
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+
 /* import bootstrap to set changes */
 @import "~bootstrap/scss/bootstrap";
