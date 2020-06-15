@@ -1,6 +1,14 @@
 import React from "react"
 import Container from "react-bootstrap/Container"
 import Button from "react-bootstrap/Button"
+import slide1 from "../images/slide1.png"
+import slide2 from "../images/slide2.png"
+import slide3 from "../images/slide3.png"
+import slide4 from "../images/slide4.png"
+import slide5 from "../images/slide5.png"
+import rightArrow from "../images/right-arrow.svg"
+import leftArrow from "../images/left-arrow.svg"
+
 
 const ThumbnailContainer = ({index, handleSelect}) => {
 
@@ -25,43 +33,29 @@ const ThumbnailContainer = ({index, handleSelect}) => {
   }
   return (
     <Container className="thumbnail-container">
-      <Button onClick={prevSlide}> {`<`} </Button>
-      <div
-        className="thumbnail"
-        style={{ background: "purple", height: "100px", width: "100px" }}
-        onClick={() => goToSlide(0)}
-      >
-        <h3>1</h3>
+      <img className="thumbnail--arrow" src={leftArrow} onClick={prevSlide} />
+      <div className="thumbnails">
+        <div className="thumbnail frame" onClick={() => goToSlide(0)}>
+          <img src={slide1} />
+        </div>
+        <div className="thumbnail frame" onClick={() => goToSlide(1)}>
+          <img src={slide2} />
+        </div>
+        <div className="thumbnail frame" onClick={() => goToSlide(2)}>
+          <img src={slide3} />
+        </div>
+        <div className="thumbnail frame" onClick={() => goToSlide(3)}>
+          <img src={slide4} />
+        </div>
+        <div className="thumbnail frame" onClick={() => goToSlide(4)}>
+          <img src={slide5} />
+        </div>
       </div>
-      <div
-        className="thumbnail"
-        style={{ background: "purple", height: "100px", width: "100px" }}
-        onClick={() => goToSlide(1)}
-      >
-        <h3>2</h3>
-      </div>
-      <div
-        className="thumbnail"
-        style={{ background: "purple", height: "100px", width: "100px" }}
-        onClick={() => goToSlide(2)}
-      >
-        <h3>3</h3>
-      </div>
-      <div
-        className="thumbnail"
-        style={{ background: "purple", height: "100px", width: "100px" }}
-        onClick={() => goToSlide(3)}
-      >
-        <h3>4</h3>
-      </div>
-      <div
-        className="thumbnail"
-        style={{ background: "purple", height: "100px", width: "100px" }}
-        onClick={() => goToSlide(4)}
-      >
-        <h3>5</h3>
-      </div>
-      <Button onClick={nextSlide}> {`>`} </Button>
+      <img
+        className="thumbnail--arrow"
+        src={rightArrow}
+        onClick={nextSlide}
+      />
     </Container>
   )
 }

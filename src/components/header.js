@@ -3,12 +3,11 @@ import Jumbotron from "react-bootstrap/Jumbotron"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
-import logo from "../images/logo.png"
+import logo from "../images/logo-transparent.png"
 
 const Header = () => {
   return (
-    <Jumbotron fluid>
-      <Container>
+      <Container className="header-container frame">
         <Row>
           <Col sm={6} md={4}>
             <img src={logo} width="300"/>
@@ -19,7 +18,6 @@ const Header = () => {
           </Col>
         </Row>
       </Container>
-    </Jumbotron>
   )
 }
 
