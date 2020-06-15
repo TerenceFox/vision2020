@@ -18,7 +18,7 @@ const CarouselContainer = () => {
 
   return (
     <>
-      <Container>
+      <Container className="container--carousel">
         <Carousel
           activeIndex={index}
           onSelect={handleSelect}
