@@ -36,7 +36,8 @@ const CarouselContainer = () => {
           </Carousel.Item>
           <Carousel.Item>
             <CarouselSlide img={slide2}>
-              <h3>Our Honoree: Michael O'Conor, KCC Board Chair</h3>
+              <h3>Our Honoree:</h3>
+              <h3>Michael O'Conor, KCC Board Chair</h3>
               <p>
                 Twenty years, countless hours, and one question: "What can I
                 do?"
@@ -88,7 +89,6 @@ const CarouselContainer = () => {
         </Carousel>
         <ThumbnailContainer index={index} handleSelect={handleSelect} />
       </Container>
-      
     </>
   )
 }

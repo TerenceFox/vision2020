@@ -11,15 +11,20 @@ const CarouselSlide = ({ img, children, src }) => {
   const [show, setShow] = useState(false)
   return (
     <>
-      <Container className="slide-container">
+      <Container className="carousel--slide-container">
         <Row>
-          <Col md={8} lg={6} className="img-container">
-            <div className="play-button" onClick={() => setShow(true)}>
-              <img src={playButton} className="icon--play-button" />
+          <Col lg={true} xl={8} className="img-container">
+            <div
+              className="img-container--overlay"
+              onClick={() => setShow(true)}
+            >
+              <img src={playButton} className="img-container--play-button" />
             </div>
-            <img src={img} />
+            <img src={img} className="carousel--img" />
           </Col>
-          <Col md={4} lg={6} className="slide--text">{children}</Col>
+          <Col lg={true} xl={4} className="slide--text">
+            {children}
+          </Col>
         </Row>
       </Container>
 

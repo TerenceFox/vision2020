@@ -1,6 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import "./index.scss"
+import "../styles/index.scss"
 import Header from '../components/Header'
 import CarouselContainer from '../components/CarouselContainer'
 import MainVideo from '../components/MainVideo'
