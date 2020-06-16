@@ -1,11 +1,10 @@
 import React from "react"
 import Container from "react-bootstrap/Container"
 import Button from "react-bootstrap/Button"
-import slide1 from "../images/slide1.png"
-import slide2 from "../images/slide2.png"
-import slide3 from "../images/slide3.png"
-import slide4 from "../images/slide4.png"
-import slide5 from "../images/slide5.png"
+import slide1 from "../images/slides/slide1.png"
+import slide2 from "../images/slides/slide2.png"
+import slide3 from "../images/slides/slide3.png"
+import slide4 from "../images/slides/slide4.png"
 import rightArrow from "../images/right-arrow.svg"
 import leftArrow from "../images/left-arrow.svg"
 
@@ -17,7 +16,7 @@ const ThumbnailContainer = ({index, handleSelect}) => {
   }
 
   const nextSlide = () => {
-    if (index > 3) {
+    if (index > 2) {
       handleSelect(0)
     } else {
       handleSelect(index+1)
@@ -28,9 +27,10 @@ const ThumbnailContainer = ({index, handleSelect}) => {
     if (index > 0) {
       handleSelect(index - 1)
     } else {
-      handleSelect(4)
+      handleSelect(3)
     }
   }
+
   return (
     <Container className="thumbnail-container">
       <img className="thumbnail--arrow" src={leftArrow} onClick={prevSlide} />
@@ -46,9 +46,6 @@ const ThumbnailContainer = ({index, handleSelect}) => {
         </div>
         <div className="thumbnail frame" onClick={() => goToSlide(3)}>
           <img src={slide4} />
-        </div>
-        <div className="thumbnail frame" onClick={() => goToSlide(4)}>
-          <img src={slide5} />
         </div>
       </div>
       <img

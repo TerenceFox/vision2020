@@ -29,12 +29,13 @@ img {
   background: white;
   margin: 4em auto;
   padding: 0;
-  background-image: url('../images/slide5-original.jpg');
+  background-image: url("../images/header-background.jpg");
   background-repeat: no-repeat;
   background-position: right;
 }
 
-.header--text, .header--logo {
+.header--text,
+.header--logo {
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -46,10 +47,11 @@ img {
 }
 
 @media (min-width: 768px) {
-  .header--logo, .header--text {
-      display: flex;
-      align-items: center;
-    }
+  .header--logo,
+  .header--text {
+    display: flex;
+    align-items: center;
+  }
   .container--header.frame {
     background-size: auto 100%;
   }
@@ -204,7 +206,7 @@ img {
   padding: 0;
 }
 
-// Donate CTA 
+// Donate CTA
 
 .container--donate {
   display: flex;
@@ -233,12 +235,12 @@ button.donate--btn {
   height: 75px;
   width: 200px;
   border-radius: 50px;
-  font-family: 'Rodger';
+  font-family: "Rodger";
   font-size: 1.5rem;
   font-weight: 700;
   color: $blue;
   background: $yellow;
-  border: none; 
+  border: none;
 }
 
 @media (min-width: 576px) {
@@ -267,7 +269,8 @@ button.donate--btn {
   background: white;
 }
 
-.container--instagram-feed > h3, .container--instagram-feed > p {
+.container--instagram-feed > h3,
+.container--instagram-feed > p {
   text-align: center;
 }
 
@@ -276,8 +279,14 @@ button.donate--btn {
   font-weight: 700;
 }
 
+.accent > a {
+  color: $secondary;
+  text-decoration: underline;
+}
+
 .container--sponsorships > h3 {
   text-align: center;
+  margin-bottom: 1em;
 }
 
 .container--sponsorships {
@@ -288,9 +297,40 @@ button.donate--btn {
 }
 
 .sponsorships--logo-group {
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  width: 100%;
+  grid: auto / repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.sponsorships--logo-img {
+  max-height: 150px;
+  grid-column: span 2;
+  justify-self: center;
+  align-self: center;
+}
+
+#mta {
+  grid-column: span 3;
+}
+
+#gfg {
+  grid-column: span 1;
+}
+
+@media (min-width: 768px) {
+  .sponsorships--logo-group {
+    width: 80%;
+    grid: auto / repeat(6, 1fr);
+  }
+
+  #bnb {
+    grid-column: span 3;
+  }
+
+  #century {
+    grid-column: span 1;
+  }
 }
 
 /* import bootstrap to set changes */
