@@ -81,8 +81,9 @@ img {
 // Carousel
 
 // Carousel layout
-.container--carousel {
+.container--carousel.container {
   background: none;
+  padding: 0;
 }
 
 .carousel-item {
@@ -136,6 +137,7 @@ img {
 .img-container--overlay {
   display: flex;
   position: absolute;
+  z-index: 2;
   top: 0;
   left: 0;
   height: 100%;
@@ -311,11 +313,11 @@ a.donate--btn {
   align-self: center;
 }
 
-#mta {
+#mta, #ib {
   grid-column: span 3;
 }
 
-#gfg {
+#gfg, #ppm {
   grid-column: span 1;
 }
 
@@ -334,5 +336,10 @@ a.donate--btn {
   }
 }
 
+
+.tech-support {
+  margin-top: 2em;
+  text-align: center;
+}
 /* import bootstrap to set changes */
 @import "~bootstrap/scss/bootstrap";

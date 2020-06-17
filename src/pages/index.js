@@ -17,7 +17,7 @@ const IndexPage = () => (
     </Helmet>
     <Header />
     <CarouselContainer />
-    <MainVideo src={""} />
+    <MainVideo />
     <DonateCTA />
     <InstagramFeed />
     <SponsorshipLogos />

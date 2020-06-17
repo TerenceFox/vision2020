@@ -19,7 +19,7 @@ const Header = () => {
             Zoom room!
           </a>
         </h3>
-        <p>Learn about the Saturday Play program and Toast the Honoree.</p>
+        <p>Learn about the Saturday Play Program and Toast the Honoree.</p>
       </div>
     </Container>
   )

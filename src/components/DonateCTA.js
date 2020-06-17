@@ -6,7 +6,7 @@ const DonateCTA = () => {
   return (
     <Container className="container--donate frame">
       <h1>
-        Raising money for for young children with Autism and their families
+        Raising money for young children with Autism and their families
       </h1>
       <div className="donate--btn-container">
         <Button

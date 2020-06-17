@@ -6,6 +6,7 @@ import Modal from "react-bootstrap/Modal"
 import ResponsiveEmbed from "react-bootstrap/ResponsiveEmbed"
 import playButton from "../images/play-button.svg"
 import closeButton from "../images/close-button.svg"
+import Img from "gatsby-image"
 
 const CarouselSlide = ({ img, children, src }) => {
   const [show, setShow] = useState(false)
@@ -20,7 +21,10 @@ const CarouselSlide = ({ img, children, src }) => {
             >
               <img src={playButton} className="img-container--play-button" />
             </div>
-            <img src={img} className="carousel--img" />
+            <Img
+              fluid={img}
+              alt="Gatsby Docs are awesome"
+            />
           </Col>
           <Col lg={true} xl={4} className="slide--text">
             {children}
