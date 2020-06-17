@@ -97,6 +97,7 @@ img {
 
 // Carousel image
 .img-container.col-lg {
+  max-height: 600px;
   padding: 0;
 }
 
@@ -110,6 +111,9 @@ img {
   min-height: 415px;
 }
 
+.slide--text > h3 {
+  margin: 1em 0;
+}
 .slide--text > p {
   line-height: 1.8em;
 }
@@ -227,13 +231,12 @@ img {
   margin-bottom: 2em;
 }
 
-button.donate-btn {
+a.donate-btn {
   margin-bottom: 50px;
 }
 
-button.donate--btn {
-  height: 75px;
-  width: 200px;
+a.donate--btn {
+  padding: .5em 1.5em;
   border-radius: 50px;
   font-family: "Rodger";
   font-size: 1.5rem;
@@ -244,9 +247,7 @@ button.donate--btn {
 }
 
 @media (min-width: 576px) {
-  button.donate--btn {
-    height: 100px;
-    width: 250px;
+  a.donate--btn {
     font-size: 2rem;
   }
 
@@ -254,10 +255,10 @@ button.donate--btn {
     flex-direction: row;
   }
 
-  button.donate-btn {
+  a.donate-btn {
     margin: 0;
   }
-  button.gallery-btn {
+  a.gallery-btn {
     margin-left: 50px;
   }
 }

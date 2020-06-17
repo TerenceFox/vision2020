@@ -28,6 +28,17 @@ const CarouselContainer = () => {
           <Carousel.Item>
             <CarouselSlide img={slide1} src={""}>
               <h3>Welcome to KCC Vision 2020: A Virtual Benefit!</h3>
+              <p>
+                What is a virtual benefit? And what is Vision 2020? In this
+                short introductory video, Executive Director Jeanne Alter will
+                answer those questions and tell you what to expect from the
+                night.
+              </p>
+              <p>
+                Once you're done watching, click the arrows below and explore
+                the rest of the webpage to learn about our Honoree, visit our
+                virtual bar, and more!
+              </p>
             </CarouselSlide>
           </Carousel.Item>
           <Carousel.Item>

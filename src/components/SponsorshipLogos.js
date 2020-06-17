@@ -16,7 +16,10 @@ const SponsorshipLogos = () => {
       <h3>
         Thank you to our sponsors! Click{" "}
         <span className="accent">
-          <a href="https://youtu.be/ZqSm3rVb2vs" target="blank">
+          <a
+            href="https://drive.google.com/file/d/1OaFZk33LVl0F2HP_ItgVZT6ZEYdsAS2F/view?usp=sharing"
+            target="blank"
+          >
             here
           </a>
         </span>{" "}
