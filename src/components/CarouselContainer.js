@@ -111,7 +111,7 @@ const CarouselContainer = () => {
                 them.
               </p>
             </CarouselSlide>
-          </Carousel.Item>bye-oslo
+          </Carousel.Item>
           
           <Carousel.Item>
             <CarouselSlide
