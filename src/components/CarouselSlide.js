@@ -2,11 +2,11 @@ import React, { useState } from "react"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
-import Modal from "react-bootstrap/Modal"
-import ResponsiveEmbed from "react-bootstrap/ResponsiveEmbed"
+
 import playButton from "../images/play-button.svg"
-import closeButton from "../images/close-button.svg"
+
 import Img from "gatsby-image"
+import YouTubeModal from './YouTubeModal'
 
 const CarouselSlide = ({ img, children, src }) => {
   const [show, setShow] = useState(false)
@@ -31,22 +31,7 @@ const CarouselSlide = ({ img, children, src }) => {
           </Col>
         </Row>
       </Container>
-
-      <Modal show={show} size="xl" centered onHide={() => setShow(false)}>
-        <img
-          src={closeButton}
-          className="modal--close-button"
-          onClick={() => setShow(false)}
-        />
-        <ResponsiveEmbed aspectRatio="16by9">
-          <iframe
-            src={src}
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </ResponsiveEmbed>
-      </Modal>
+      <YouTubeModal show={show} setShow={setShow} src={src} />
     </>
   )
 }

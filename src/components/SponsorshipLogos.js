@@ -27,6 +27,16 @@ const SponsorshipLogos = () => {
         </span>{" "}
         to see our digital journal.
       </h3>
+      <div className="tech-support">
+        <p>
+          And THANK YOU to Victorio Milian, KCC HR Director, for founding the
+          KCC photo league and donating some of his work as part of our
+          fundraising efforts. See Victorio's amazing photography{" "}
+          <a href="https://www.creativechaosphotography.com/" target="blank">
+            here
+          </a>
+        </p>
+      </div>
       <div className="sponsorships--logo-group">
         <img className="sponsorships--logo-img" src={ccny} />
         <img className="sponsorships--logo-img" id="bnb" src={bnb} />
@@ -39,16 +49,6 @@ const SponsorshipLogos = () => {
         <img className="sponsorships--logo-img" src={hr} />
         <img className="sponsorships--logo-img" id="ib" src={ib} />
         <img className="sponsorships--logo-img" id="mta" src={mta} />
-      </div>
-      <div className="tech-support">
-        <h4> Need Technical Assistance?</h4>
-        <a href="https://us02web.zoom.us/j/81467308698" target="blank">
-          Click here
-        </a>{" "}
-        to enter our Zoom help room
-        <p>
-          Or call: <a href="tel:1-973-762-7645">(973)762-7645</a>
-        </p>
       </div>
     </Container>
   )

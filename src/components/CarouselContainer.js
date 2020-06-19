@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Container from "react-bootstrap/Container"
 import Carousel from "react-bootstrap/Carousel"
-import ThumbnailContainer from './ThumbnailContainer'
-import CarouselSlide from './CarouselSlide'
+import ThumbnailContainer from "./ThumbnailContainer"
+import CarouselSlide from "./CarouselSlide"
 import ResponsiveEmbed from "react-bootstrap/ResponsiveEmbed"
 import Modal from "react-bootstrap/Modal"
 import closeButton from "../images/close-button.svg"
+import YouTubeModal from './YouTubeModal'
 
 const CarouselContainer = () => {
   const data = useStaticQuery(graphql`
@@ -23,12 +24,12 @@ const CarouselContainer = () => {
     }
   `)
 
-  const slides = data.allFile.nodes.map( node => node.childImageSharp.fluid)
+  const slides = data.allFile.nodes.map(node => node.childImageSharp.fluid)
 
   const [index, setIndex] = useState(0)
   const [show, setShow] = useState(false)
 
-  const handleSelect = (selectedIndex) => {
+  const handleSelect = selectedIndex => {
     setIndex(selectedIndex)
   }
 
@@ -110,7 +111,8 @@ const CarouselContainer = () => {
                 them.
               </p>
             </CarouselSlide>
-          </Carousel.Item>
+          </Carousel.Item>bye-oslo
+          
           <Carousel.Item>
             <CarouselSlide
               img={slides[3]}
@@ -122,25 +124,20 @@ const CarouselContainer = () => {
                 Board Member himself, demonstrates how to mix a classic drink
                 for a classic guy: the Irish Old Fashioned.
               </p>
+              <div className="accent">
+                Listen to our party playlist on Spotify{" "}
+                <a
+                  target="blank"
+                  href="https://open.spotify.com/playlist/7a1UROqFQHJEQs8p90rAFB?si=eASG2ruIQwWqBE_9-UFTpA"
+                >
+                  here!
+                </a>
+              </div>
             </CarouselSlide>
           </Carousel.Item>
         </Carousel>
       </Container>
-      <Modal show={show} size="xl" centered onHide={() => setShow(false)}>
-        <img
-          src={closeButton}
-          className="modal--close-button"
-          onClick={() => setShow(false)}
-        />
-        <ResponsiveEmbed aspectRatio="16by9">
-          <iframe
-            src={"https://www.youtube.com/embed/ZqSm3rVb2vs"}
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </ResponsiveEmbed>
-      </Modal>
+      <YouTubeModal show={show} setShow={setShow} src={"https://www.youtube.com/embed/ZqSm3rVb2vs"} />
     </>
   )
 }

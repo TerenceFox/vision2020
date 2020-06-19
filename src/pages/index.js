@@ -7,6 +7,7 @@ import MainVideo from '../components/MainVideo'
 import DonateCTA from '../components/DonateCTA'
 import InstagramFeed from '../components/InstagramFeed'
 import SponsorshipLogos from '../components/SponsorshipLogos'
+import ThankYou from '../components/ThankYou'
 
 const IndexPage = () => (
   <>
@@ -16,6 +17,7 @@ const IndexPage = () => (
       <link rel="canonical" href="http://kenchild.org/vision2020" />
     </Helmet>
     <Header />
+    <ThankYou />
     <CarouselContainer />
     <MainVideo />
     <DonateCTA />

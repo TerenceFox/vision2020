@@ -46,6 +46,10 @@ img {
   padding: 1em;
 }
 
+.header--text > p {
+  text-align: center;
+}
+
 @media (min-width: 768px) {
   .header--logo,
   .header--text {
@@ -60,12 +64,8 @@ img {
 @media (min-width: 992px) {
   .container--header.frame {
     display: grid;
-    grid: 3fr 1fr / 1fr 1fr;
+    grid: 1fr / 1fr 1fr;
     background-size: 100% auto;
-  }
-
-  .header--text {
-    grid-row: 2 / 3;
   }
 }
 
@@ -76,6 +76,26 @@ img {
 
 .header--link:hover {
   color: $yellow;
+}
+
+// Thank You
+
+.thank-you--text {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+@media (min-width: 576px) {
+  .thank-you--text {
+    width: 70%;
+  }
+}
+
+.thank-you--text > p {
+  line-height: 1.6em;
 }
 
 // Carousel
@@ -336,9 +356,9 @@ a.donate--btn {
   }
 }
 
-
 .tech-support {
-  margin-top: 2em;
+  width: 70%;
+  margin: auto;
   text-align: center;
 }
 /* import bootstrap to set changes */
