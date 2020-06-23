@@ -1,7 +1,6 @@
 import React from "react"
 import Container from "react-bootstrap/Container"
 import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
 import rightArrow from "../images/right-arrow.svg"
 import leftArrow from "../images/left-arrow.svg"
 

@@ -1,12 +1,26 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import Container from "react-bootstrap/Container"
-import logo from "../images/logo.png"
+
 
 const Header = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "logo.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+  const logo = data.file.childImageSharp.fluid
   return (
     <Container className="container--header frame">
       <div className="header--logo">
-        <img src={logo} />
+        <Img fluid={logo} alt="Black and white photo, child running on path" />
       </div>
     </Container>
   )

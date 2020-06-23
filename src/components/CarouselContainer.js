@@ -4,9 +4,6 @@ import Container from "react-bootstrap/Container"
 import Carousel from "react-bootstrap/Carousel"
 import ThumbnailContainer from "./ThumbnailContainer"
 import CarouselSlide from "./CarouselSlide"
-import ResponsiveEmbed from "react-bootstrap/ResponsiveEmbed"
-import Modal from "react-bootstrap/Modal"
-import closeButton from "../images/close-button.svg"
 import YouTubeModal from './YouTubeModal'
 
 const CarouselContainer = () => {
@@ -23,16 +20,12 @@ const CarouselContainer = () => {
       }
     }
   `)
-
   const slides = data.allFile.nodes.map(node => node.childImageSharp.fluid)
-
   const [index, setIndex] = useState(0)
   const [show, setShow] = useState(false)
-
   const handleSelect = selectedIndex => {
     setIndex(selectedIndex)
   }
-
   return (
     <>
       <ThumbnailContainer
@@ -51,6 +44,7 @@ const CarouselContainer = () => {
           <Carousel.Item>
             <CarouselSlide
               img={slides[0]}
+              alt="Black and white photo of two people in conversation"
               src={"https://www.youtube.com/embed/UHDqLPFYEpU"}
             >
               <h3>Welcome to KCC Vision 2020: A Virtual Benefit!</h3>
@@ -71,6 +65,7 @@ const CarouselContainer = () => {
             <CarouselSlide
               img={slides[1]}
               src={"https://www.youtube.com/embed/XysI6L2Y-58"}
+              alt="Black and white photo of man holding baby"
             >
               <h3>Our Honoree:</h3>
               <h3>Michael O'Conor, KCC Board Chair</h3>
@@ -100,6 +95,7 @@ const CarouselContainer = () => {
             <CarouselSlide
               img={slides[2]}
               src={"https://www.youtube.com/embed/dRyqLeZaJUU"}
+              alt="Black and white photo of woman helping child with crafts"
             >
               <h3>Saturday Play Program</h3>
               <p>
@@ -117,6 +113,7 @@ const CarouselContainer = () => {
             <CarouselSlide
               img={slides[3]}
               src={"https://www.youtube.com/embed/qXTYIkLBgXA"}
+              alt="Black and white photo of man pouring a drink"
             >
               <h3>Join Marty at the Bar</h3>
               <p>

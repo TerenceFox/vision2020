@@ -4,7 +4,6 @@ import YouTubeModal from './YouTubeModal'
 
 const ThankYou = () => {
   const [show, setShow] = useState(false)
-
   return (
     <>
       <Container className="container--thank-you frame">

@@ -8,6 +8,7 @@ import DonateCTA from '../components/DonateCTA'
 import InstagramFeed from '../components/InstagramFeed'
 import SponsorshipLogos from '../components/SponsorshipLogos'
 import ThankYou from '../components/ThankYou'
+import Banner from '../components/Banner'
 
 const IndexPage = () => (
   <>
@@ -16,6 +17,7 @@ const IndexPage = () => (
       <title>KCC Vision 2020 Virtual Benefit</title>
       <link rel="canonical" href="http://kenchild.org/vision2020" />
     </Helmet>
+    <Banner />
     <Header />
     <ThankYou />
     <CarouselContainer />

@@ -23,6 +23,22 @@ img {
   box-shadow: 10px 10px 10px rgba(7, 4, 4, 0.7);
 }
 
+// Banner 
+
+.banner.nav {
+  background: rgba(255,255,255, .8);
+}
+
+a.nav-link > h3 {
+  font-size: 1.5em;
+  color: $secondary;
+}
+
+@media (min-width: 576px) {
+  a.nav-link > h3 {
+    font-size: 2em;
+  }
+}
 // Header
 
 .container--header.frame {
@@ -31,51 +47,14 @@ img {
   padding: 0;
   background-image: url("../images/header-background.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: right;
 }
 
-.header--text,
 .header--logo {
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  background: rgba(255, 255, 255, 0.7);
-}
-
-.header--text {
-  padding: 1em;
-}
-
-.header--text > p {
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  .header--logo,
-  .header--text {
-    display: flex;
-    align-items: center;
-  }
-  .container--header.frame {
-    background-size: auto 100%;
-  }
-}
-
-@media (min-width: 992px) {
-  .container--header.frame {
-    display: grid;
-    grid: 1fr / 1fr 1fr;
-    background-size: 100% auto;
-  }
-}
-
-.header--link {
-  color: $secondary;
-  text-decoration: underline;
-}
-
-.header--link:hover {
-  color: $yellow;
+  background:rgba(255,255,255, .7);
+  height: 100%;
+  max-width: 500px;
 }
 
 // Thank You
@@ -322,22 +301,29 @@ a.donate--btn {
 .sponsorships--logo-group {
   display: grid;
   width: 100%;
-  grid: auto / repeat(4, 1fr);
+  grid: repeat(5, 1fr) / repeat(4, 1fr);
   grid-gap: 20px;
 }
 
 .sponsorships--logo-img {
-  max-height: 150px;
   grid-column: span 2;
-  justify-self: center;
-  align-self: center;
 }
 
-#mta, #ib {
+#logo-mta, #logo-ib {
   grid-column: span 3;
 }
 
-#gfg, #ppm {
+#logo-bnb, #logo-century21 {
+ grid-row: 3/4;
+}
+#logo-mta, #logo-gfg {
+  grid-row: 1 / 2;
+}
+
+#logo-ib, #logo-ppm {
+  grid-row: 2/ 3;
+}
+#logo-gfg, #logo-ppm {
   grid-column: span 1;
 }
 

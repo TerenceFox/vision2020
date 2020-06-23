@@ -1,18 +1,35 @@
-import React from 'react'
+import React from "react"
 import Container from "react-bootstrap/Container"
-import bnb from "../images/sponsorship-logos/logo-bnb.png"
-import ccny from "../images/sponsorship-logos/logo-ccny.jpg"
-import century from "../images/sponsorship-logos/logo-century21.png"
-import cs from "../images/sponsorship-logos/logo-cs.jpg"
-import gfg from "../images/sponsorship-logos/logo-gfg.png"
-import hr from "../images/sponsorship-logos/logo-hr.png"
-import mta from "../images/sponsorship-logos/logo-mta.png"
-import po from "../images/sponsorship-logos/logo-pelloverton.jpg"
-import sng from "../images/sponsorship-logos/logo-snb.jpg"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import ib from "../images/sponsorship-logos/logo-ib.gif"
-import ppm from "../images/sponsorship-logos/logo-ppm.png"
+
 
 const SponsorshipLogos = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(filter: { relativeDirectory: { eq: "sponsorship-logos" } }) {
+        nodes {
+          name
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  `)
+  const logos = data.allFile.nodes.map(img =>
+    img.childImageSharp ? (
+      <div id={`${img.name}`} className="sponsorships--logo-img">
+        <Img fluid={img.childImageSharp.fluid} />
+      </div>
+    ) : (
+      <img id={`${img.name}`} src={ib} />
+    )
+  )
+  
   return (
     <Container className="container--sponsorships frame">
       <h3>
@@ -38,17 +55,7 @@ const SponsorshipLogos = () => {
         </p>
       </div>
       <div className="sponsorships--logo-group">
-        <img className="sponsorships--logo-img" src={ccny} />
-        <img className="sponsorships--logo-img" id="bnb" src={bnb} />
-        <img className="sponsorships--logo-img" id="gfg" src={gfg} />
-        <img className="sponsorships--logo-img" src={ppm} />
-        <img className="sponsorships--logo-img" src={cs} />
-        <img className="sponsorships--logo-img" src={century} />
-        <img className="sponsorships--logo-img" src={po} />
-        <img className="sponsorships--logo-img" src={sng} />
-        <img className="sponsorships--logo-img" src={hr} />
-        <img className="sponsorships--logo-img" id="ib" src={ib} />
-        <img className="sponsorships--logo-img" id="mta" src={mta} />
+        {logos}
       </div>
     </Container>
   )

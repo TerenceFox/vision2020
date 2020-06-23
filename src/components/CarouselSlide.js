@@ -2,13 +2,11 @@ import React, { useState } from "react"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
-
 import playButton from "../images/play-button.svg"
-
 import Img from "gatsby-image"
 import YouTubeModal from './YouTubeModal'
 
-const CarouselSlide = ({ img, children, src }) => {
+const CarouselSlide = ({ img, alt, children, src }) => {
   const [show, setShow] = useState(false)
   return (
     <>
@@ -23,7 +21,7 @@ const CarouselSlide = ({ img, children, src }) => {
             </div>
             <Img
               fluid={img}
-              alt="Gatsby Docs are awesome"
+              alt={alt}
             />
           </Col>
           <Col lg={true} xl={4} className="slide--text">
